@@ -154,11 +154,10 @@ bool lvgl_spi_driver_init(int host,
     int dma_channel,
     int quadwp_pin, int quadhd_pin)
 {
-    assert((0 <= host) && (SPI_HOST_MAX > host));
+    assert((0 <= host) && (SPI3_HOST >= host));
     const char *spi_names[] = {
         "SPI1_HOST", "SPI2_HOST", "SPI3_HOST"
     };
-
     ESP_LOGI(TAG, "Configuring SPI host %s", spi_names[host]);
     ESP_LOGI(TAG, "MISO pin: %d, MOSI pin: %d, SCLK pin: %d, IO2/WP pin: %d, IO3/HD pin: %d",
         miso_pin, mosi_pin, sclk_pin, quadwp_pin, quadhd_pin);

@@ -13,7 +13,8 @@ extern "C" {
  *      INCLUDES
  *********************/
 #include <stdbool.h>
-
+#define LV_HOR_RES_MAX 320
+#define LV_VER_RES_MAX  480
 #include "lvgl_spi_conf.h"
 #include "lvgl_tft/disp_driver.h"
 #include "lvgl_tft/esp_lcd_backlight.h"
